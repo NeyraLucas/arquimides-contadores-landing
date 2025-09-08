@@ -1,6 +1,7 @@
+import Accountant from "../assets/accountant.png";
 function Hero() {
   return (
-    <section className="relative">
+    <section className="relative min-h-screen flex items-center justify-center py-20">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -10,33 +11,29 @@ function Hero() {
       ></div>
       <div className="absolute inset-0 bg-[var(--primary-color)] opacity-80"></div>
 
-      <div className="relative mx-auto max-w-7xl px-4 py-24 grid grid-cols-1 gap-16 lg:grid-cols-2">
-        <div>
-          <h1 className="text-4xl font-extrabold sm:text-5xl lg:text-6xl">
-            Expert Accounting for Construction Success
+      <div className="relative z-10 container mx-auto px-6 py-12 lg:px-8 grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
+        <div className="text-white text-center lg:text-left">
+          <h1 className="text-4xl font-extrabold md:text-5xl lg:text-6xl xl:text-7xl">
+            Contabilidad Estrategica para el crecimiento de tu empresa
+            constructora.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-gray-300">
-            Navigate complex financial landscapes with ConstructWise. We provide
-            specialized accounting services tailored for construction projects,
-            ensuring accuracy, compliance, and profitability.
-          </p>
           <a
             href="#contact"
             className="mt-10 inline-flex h-12 items-center justify-center rounded-md px-6 bg-[var(--secondary-color)] text-base font-bold hover:bg-opacity-90"
           >
-            Get a Free Consultation
+            Obtenga una consulta
           </a>
         </div>
         <div className="flex justify-center lg:justify-end">
           <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWXrsTH0EhhX0myjRcp1UDmiU3-GXWxw0S5kEq_dUmLJK6v_tq9l7exujaADTOgVWsPxDYoBvVYRNGdP-6V7IEjwNa2vChYfrRGYYz5Kx5tJFNj6SYpv2oC4Wmn2w8WgLhfRIxtWRpalXBCbslx64NFwGHQ2lofAnplvLG4xGYvYZWtzoT-CtKXLwOuErQC0xTNpTCyUw0exCi-Rp8dKCYAswMiKR7JoHbjiUhFZJN_tFqsCx1sa_LymXidzL22wEK085OjK9xn0oP"
+            src={Accountant}
             alt="Accountant"
-            className="h-80 w-80 rounded-full object-cover shadow-xl"
+            className="w-full max-w-[320px] h-auto rounded-full object-cover shadow-xl"
           />
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

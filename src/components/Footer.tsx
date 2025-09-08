@@ -5,14 +5,14 @@ function Footer() {
       className="py-10 text-center border-t border-gray-800 mt-10"
     >
       <p className="mb-4">
-        © {new Date().getFullYear()} ConstructWise. All rights reserved.
+        © {new Date().getFullYear()} Arquimides Contadores. All rights reserved.
       </p>
-      <a
+      {/* <a
         href="mailto:info@constructwise.com"
         className="text-[var(--secondary-color)] hover:underline"
       >
         info@constructwise.com
-      </a>
+      </a> */}
     </footer>
   )
 }

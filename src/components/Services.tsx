@@ -1,7 +1,7 @@
 const services = [
   {
-    title: "Project Budgeting",
-    desc: "Accurate budgeting strategies to keep your construction projects financially sound.",
+    title: "Contabilidad por Centro de Costos",
+    desc: "La contabilidad por centro de costos te permite saber exactamente cuánto gana y cuánto pierde cada una de tus obras. En Arquimedes Contadores diseñamos un sistema contable estructurado por proyecto, con reportes claros que desglosan materiales, mano de obra, gastos generales y márgenes reales. Esta visibilidad te permite optimizar recursos, tomar mejores decisiones financieras y detectar fugas de dinero antes de que afecten tu rentabilidad. Usamos herramientas inteligentes que agilizan los procesos, garantizan precisión en la información y generan informes listos para presentar a socios, bancos o inversionistas.",
     icon: "analytics",
   },
   {
@@ -20,7 +20,7 @@ function Services() {
   return (
     <section id="services" className="py-20 bg-gray-900 px-6">
       <h2 className="text-3xl font-bold text-center text-[var(--secondary-color)] mb-12">
-        Our Services
+        Nuestros servicios
       </h2>
       <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
         {services.map((s) => (
