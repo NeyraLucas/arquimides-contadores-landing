@@ -1,0 +1,8 @@
+@import "swiper/css";
+@import "swiper/css/pagination";
+@import "swiper/css/autoplay";
+
+
+.swiper-pagination {
+  padding-top: 1rem; /* o 16px */
+}

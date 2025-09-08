@@ -26,7 +26,7 @@ function Header() {
           </div>
           <a
             href="#contact"
-            className="h-10 flex items-center justify-center rounded-md px-5  bg-[var(--secondary-color)] text-sm font-bold text-white hover:bg-blue-700 transition-colors"
+            className="h-10 flex items-center justify-center rounded-md px-5  bg-[var(--secondary-color)] text-sm font-bold text-white hover:bg-white hover:text-[var(--secondary-color)] transition-colors"
           >
             Contact Us
           </a>
@@ -35,7 +35,7 @@ function Header() {
         {/* Botón de hamburguesa para móvil */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden text-gray-600 focus:outline-none"
+          className="md:hidden text-gray-50 focus:outline-none"
         >
           {isMenuOpen ? (
             <svg
@@ -78,7 +78,7 @@ function Header() {
         } md:hidden bg-white shadow-md border-t border-gray-200 px-4 py-2`}
       >
         <div className="flex flex-col gap-4">
-          {["Home", "About", "Services", "Testimonials"].map((item) => (
+          {["Inicio", "Acerca de", "Servicios", "Testimonios"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -90,7 +90,7 @@ function Header() {
           ))}
           <a
             href="#contact"
-            className="h-10 flex items-center justify-center rounded-md px-5 bg-blue-600 text-sm font-bold text-white hover:bg-blue-700 transition-colors mt-2"
+            className="h-10 flex items-center justify-center rounded-md px-5  bg-[var(--secondary-color)] text-sm font-bold text-white hover:bg-white hover:text-[var(--secondary-color)] transition-colors mt-2"
             onClick={() => setIsMenuOpen(false)} // Cierra el menú al hacer clic en el botón
           >
             Contact Us

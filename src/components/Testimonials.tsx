@@ -2,19 +2,19 @@ const testimonials = [
   {
     name: "Sarah Johnson",
     role: "CEO, BuildRight Inc.",
-    text: "ConstructWise transformed the way we manage finances in our projects. Their expertise is unmatched.",
+    text: "Construct transformed the way we manage finances in our projects. Their expertise is unmatched.",
   },
   {
     name: "Michael Lee",
     role: "Project Manager, Skyline Builders",
-    text: "Thanks to ConstructWise, we achieved better profitability and compliance across all our operations.",
+    text: "Thanks to Construct, we achieved better profitability and compliance across all our operations.",
   },
 ]
 
 function Testimonials() {
   return (
     <section id="testimonials" className="py-20 px-6">
-      <h2 className="text-3xl font-bold text-center text-[var(--secondary-color)] mb-12">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-[var(--secondary-color)] mb-12">
         Testimonials
       </h2>
       <div className="grid gap-10 sm:grid-cols-2 max-w-5xl mx-auto">
