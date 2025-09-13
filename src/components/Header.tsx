@@ -28,7 +28,7 @@ function Header() {
             href="#contact"
             className="h-10 flex items-center justify-center rounded-md px-5  bg-[var(--secondary-color)] text-sm font-bold text-white hover:bg-white hover:text-[var(--secondary-color)] transition-colors"
           >
-            Contact Us
+            Contactanos
           </a>
         </nav>
 
@@ -93,7 +93,7 @@ function Header() {
             className="h-10 flex items-center justify-center rounded-md px-5  bg-[var(--secondary-color)] text-sm font-bold text-white hover:bg-white hover:text-[var(--secondary-color)] transition-colors mt-2"
             onClick={() => setIsMenuOpen(false)} // Cierra el menú al hacer clic en el botón
           >
-            Contact Us
+            Contactanos
           </a>
         </div>
       </div>
