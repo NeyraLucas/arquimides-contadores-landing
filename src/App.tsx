@@ -4,6 +4,7 @@ import About from "./components/About"
 import Services from "./components/Services"
 import Testimonials from "./components/Testimonials"
 import Footer from "./components/Footer"
+import ContactUs from "./components/ContactUs"
 import FloatingWhatsApp from "./components/FloatingWhatsApp"
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Services />
         <Testimonials />
       </main>
+      <ContactUs />
       <Footer />
       <FloatingWhatsApp />
     </div>

@@ -1,7 +1,6 @@
 function Footer() {
   return (
     <footer
-      id="contact"
       className="py-10 text-center border-t border-gray-800 mt-10"
     >
       <p className="mb-4">
