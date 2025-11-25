@@ -1,11 +1,14 @@
 @import "tailwindcss";
 
-
-
 :root {
     --primary-color: #001020;
     --secondary-color: #B8530A;
     --contrast-color: #FFFFFF;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--contrast-color);
 }
 
 .carousel-container {
@@ -29,4 +32,18 @@
     .carousel-item {
         width: calc(100% / 3);
     }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 1s ease-in-out forwards;
 }

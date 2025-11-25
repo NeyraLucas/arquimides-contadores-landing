@@ -13,23 +13,33 @@ function Hero() {
 
       <div className="relative z-10 container mx-auto px-6 py-12 lg:px-8 grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
         <div className="text-white text-center lg:text-left">
-          <h1 className="text-4xl font-extrabold md:text-5xl lg:text-6xl xl:text-7xl">
-            Contabilidad Estrategica para el crecimiento de tu empresa
+          <h1 className="text-4xl font-extrabold md:text-5xl lg:text-6xl xl:text-7xl mb-6">
+            Contabilidad Estratégica para el crecimiento de tu empresa
             constructora.
           </h1>
+          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0">
+            Especialistas en cumplimiento fiscal y financiero para el sector construcción.
+            Gestión experta de SIROC, REPSE, IMSS y estrategias fiscales para optimizar tus recursos.
+          </p>
           <a
             href="#contact"
-            className="mt-10 inline-flex h-12 items-center justify-center rounded-md px-6 bg-[var(--secondary-color)] text-base font-bold hover:bg-opacity-90"
+            className="inline-flex h-12 items-center justify-center rounded-md px-6 bg-[var(--secondary-color)] text-base font-bold hover:bg-opacity-90 transition-all transform hover:scale-105"
           >
             Obtenga una consulta
           </a>
         </div>
-        <div className="flex justify-center lg:justify-end">
-          <img
-            src={Accountant}
-            alt="Accountant"
-            className="w-full max-w-[320px] h-auto rounded-full object-cover shadow-xl"
-          />
+        <div className="flex flex-col items-center justify-center lg:items-end">
+          <figure className="flex flex-col items-center">
+            <img
+              src={Accountant}
+              alt="Cesar A. Urbina Romero - Contador Fiscalista Especializado en Constructoras"
+              className="w-full max-w-[320px] h-auto rounded-full object-cover shadow-xl border-4 border-[var(--secondary-color)]"
+            />
+            <figcaption className="flex flex-col items-center justify-center text-center mt-4 bg-black/30 p-4 rounded-lg backdrop-blur-sm">
+              <p className="font-bold text-lg text-white">Cesar A. Urbina Romero</p>
+              <p className="text-[var(--secondary-color)] font-medium">Contador Fiscalista</p>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
