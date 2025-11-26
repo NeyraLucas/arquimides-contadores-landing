@@ -4,6 +4,7 @@ import Hero from "./components/Hero"
 import About from "./components/About"
 import Services from "./components/Services"
 import Testimonials from "./components/Testimonials"
+import Partners from "./components/Partners"
 import Footer from "./components/Footer"
 import ContactUs from "./components/ContactUs"
 import FloatingWhatsApp from "./components/FloatingWhatsApp"
@@ -45,6 +46,7 @@ function App() {
         <About />
         <Services />
         <Testimonials />
+        <Partners />
       </main>
       <ContactUs />
       <Footer />

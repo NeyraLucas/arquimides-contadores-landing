@@ -6,6 +6,8 @@ import maquilado from "../assets/imgs/Maquilado-de-nomina.png"
 import timbrado from "../assets/imgs/timbrado-de-nomina.jpg"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 import Modal from "react-modal";
 import React from "react";
 Modal.setAppElement("#root");
@@ -67,7 +69,7 @@ function Services() {
     null | (typeof services)[0]
   >(null);
 
-    useEffect(() => {
+  useEffect(() => {
     if (selectedService) {
       // Bloquea el scroll del body
       document.body.style.overflow = "hidden";
@@ -93,33 +95,41 @@ function Services() {
       <Swiper
         modules={[Autoplay, Pagination]}
         spaceBetween={24}
-        pagination={{ clickable: true }}
-        // autoplay={{ delay: 4000, disableOnInteraction: false }}
+        pagination={{
+          clickable: true,
+          dynamicBullets: true,
+        }}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
         grabCursor
-        className="pb-12"
+        loop={true}
+        className="services-swiper"
         breakpoints={{
-          320: { slidesPerView: 1 },
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-          1280: { slidesPerView: 4 },
+          320: { slidesPerView: 1, spaceBetween: 16 },
+          640: { slidesPerView: 2, spaceBetween: 20 },
+          1024: { slidesPerView: 3, spaceBetween: 24 },
+          1280: { slidesPerView: 4, spaceBetween: 24 },
         }}
       >
         {services.map((s) => (
           <SwiperSlide key={s.title}>
-            <div className="bg-[#00182E] rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 flex flex-col select-none">
+            <div className="bg-[#00182E] rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col select-none min-h-[420px] h-full">
               <img
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover flex-shrink-0"
                 src={s.img}
                 alt={`Imagen del servicio de ${s.title}`}
               />
               <div className="p-6 text-white flex flex-col items-center text-center flex-1">
-                <div className="font-bold text-xl mb-2">{s.title}</div>
-                <p className="text-gray-200 text-sm mb-4 line-clamp-3">
+                <div className="font-bold text-xl mb-3 min-h-[56px] flex items-center">{s.title}</div>
+                <p className="text-gray-200 text-sm mb-4 line-clamp-3 flex-1">
                   {s.desc}
                 </p>
                 <button
                   onClick={() => openModal(s)}
-                  className="mt-auto px-6 py-2 rounded-full bg-[var(--secondary-color)] text-sm font-bold text-white hover:bg-white hover:text-[var(--secondary-color)] transition-color flex items-center space-x-2"
+                  className="mt-auto px-6 py-2 rounded-full bg-[var(--secondary-color)] text-sm font-bold text-white hover:bg-white hover:text-[var(--secondary-color)] transition-all duration-300 flex items-center space-x-2 shadow-md hover:shadow-lg flex-shrink-0"
                 >
                   <span>Saber más</span>
                   <svg
