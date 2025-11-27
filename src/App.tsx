@@ -39,7 +39,7 @@ function App() {
   }
 
   return (
-    <div className="bg-[var(--primary-color)] text-[var(--contrast-color)] min-h-screen flex flex-col animate-fade-in">
+    <div className="bg-white dark:bg-[var(--primary-color)] text-[var(--contrast-color)] min-h-screen flex flex-col animate-fade-in">
       <Header />
       <main className="flex-1">
         <Hero />

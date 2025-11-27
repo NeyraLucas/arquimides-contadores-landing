@@ -1,10 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { FaSun, FaMoon } from "react-icons/fa";
 import logoArquimides from '../assets/logo-arquimides-contadores.png';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      setDarkMode(true);
+      document.documentElement.classList.add('dark');
+    } else {
+      setDarkMode(false);
+      document.documentElement.classList.remove('dark');
+    }
+  }, []);
+
+  const toggleDarkMode = () => {
+    if (darkMode) {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+      setDarkMode(false);
+    } else {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+      setDarkMode(true);
+    }
+  };
   return (
-    <header className="fixed top-0 left-0 w-full z-40 bg-[var(--primary-color)] border-b border-gray-200 shadow-sm">
+    <header className="bg-white fixed top-0 left-0 w-full z-40 dark:bg-[var(--primary-color)] border-b border-gray-200 shadow-sm">
       <div className="container mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
         {/* Logo y Nombre */}
         <div className="flex items-center gap-3">
@@ -14,7 +38,7 @@ function Header() {
         {/* Menú de navegación para escritorio */}
         <nav className="hidden md:flex flex-1 justify-end gap-8 items-center">
           <div className="flex items-center gap-8">
-            {["Home", "About", "Services", "Testimonials"].map((item) => (
+            {["Inicio", "Nosotros", "Servicios", "Testimonios"].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -30,6 +54,13 @@ function Header() {
           >
             Contactanos
           </a>
+          <button
+            onClick={toggleDarkMode}
+            className="p-2 rounded-full text-gray-200 hover:text-[var(--secondary-color)] transition-colors focus:outline-none cursor-pointer"
+            aria-label="Toggle Dark Mode"
+          >
+            {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
+          </button>
         </nav>
 
         {/* Botón de hamburguesa para móvil */}
@@ -73,9 +104,8 @@ function Header() {
 
       {/* Menú desplegable para móvil */}
       <div
-        className={`${
-          isMenuOpen ? "block" : "hidden"
-        } md:hidden bg-white shadow-md border-t border-gray-200 px-4 py-2`}
+        className={`${isMenuOpen ? "block" : "hidden"
+          } md:hidden bg-white shadow-md border-t border-gray-200 px-4 py-2`}
       >
         <div className="flex flex-col gap-4">
           {["Inicio", "Acerca de", "Servicios", "Testimonios"].map((item) => (
@@ -95,6 +125,23 @@ function Header() {
           >
             Contactanos
           </a>
+          <button
+            onClick={() => {
+              toggleDarkMode();
+              setIsMenuOpen(false);
+            }}
+            className="flex items-center gap-2 text-base font-medium text-gray-600 hover:text-blue-600 transition-colors py-2 cursor-pointer"
+          >
+            {darkMode ? (
+              <>
+                <FaSun size={20} /> <span>Modo Claro</span>
+              </>
+            ) : (
+              <>
+                <FaMoon size={20} /> <span>Modo Oscuro</span>
+              </>
+            )}
+          </button>
         </div>
       </div>
     </header>
