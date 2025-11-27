@@ -38,7 +38,7 @@ function Header() {
         {/* Menú de navegación para escritorio */}
         <nav className="hidden md:flex flex-1 justify-end gap-8 items-center">
           <div className="flex items-center gap-8">
-            {["Inicio", "Nosotros", "Servicios", "Testimonios"].map((item) => (
+            {["Inicio", "Nosotros", "Servicios", "Testimonios", "Partners"].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -49,7 +49,7 @@ function Header() {
             ))}
           </div>
           <a
-            href="#contact"
+            href="#contacto"
             className="h-10 flex items-center justify-center rounded-md px-5 border border-[var(--secondary-color)]  bg-[var(--secondary-color)] text-sm font-bold text-white hover:bg-white hover:text-[var(--secondary-color)] transition-colors"
           >
             Contactanos
@@ -108,7 +108,7 @@ function Header() {
           } md:hidden bg-white shadow-md border-t border-gray-200 px-4 py-2`}
       >
         <div className="flex flex-col gap-4">
-          {["Inicio", "Acerca de", "Servicios", "Testimonios"].map((item) => (
+          {["Inicio", "Acerca de", "Servicios", "Testimonios", "Partners"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -119,7 +119,7 @@ function Header() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="#contacto"
             className="h-10 flex items-center justify-center rounded-md px-5  bg-[var(--secondary-color)] border border-[var(--secondary-color)] text-sm font-bold text-white hover:bg-white hover:text-[var(--secondary-color)] transition-colors mt-2"
             onClick={() => setIsMenuOpen(false)} // Cierra el menú al hacer clic en el botón
           >

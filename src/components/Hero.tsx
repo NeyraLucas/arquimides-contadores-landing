@@ -1,7 +1,7 @@
 import Accountant from "../assets/accountant.png";
 function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center py-20">
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center py-20">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -22,7 +22,7 @@ function Hero() {
             Gestión experta de SIROC, REPSE, IMSS y estrategias fiscales para optimizar tus recursos.
           </p>
           <a
-            href="#contact"
+            href="#contacto"
             className="inline-flex h-12 items-center justify-center rounded-md px-6 bg-[var(--secondary-color)] text-base font-bold hover:bg-opacity-90 transition-all transform hover:scale-105"
           >
             Obtenga una consulta

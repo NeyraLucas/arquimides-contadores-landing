@@ -93,7 +93,7 @@ function Services() {
     setSelectedService(service);
   const closeModal = () => setSelectedService(null);
   return (
-    <section id="services" className="py-20 dark:bg-gray-900 px-6">
+    <section id="servicios" className="py-20 bg-gray-50 dark:bg-gray-900 px-6 transition-colors duration-300">
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-[var(--secondary-color)] mb-12">
         Nuestros servicios
       </h2>
@@ -121,20 +121,23 @@ function Services() {
       >
         {services.map((s) => (
           <SwiperSlide key={s.title}>
-            <div onClick={() => openModal(s)} className="bg-[#00182E] rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col select-none min-h-[420px] h-full">
+            <div onClick={() => openModal(s)} className="bg-white dark:bg-[#00182E] rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col select-none min-h-[420px] h-full cursor-pointer group">
               <img
                 className="w-full h-48 object-cover flex-shrink-0"
                 src={s.img}
                 alt={`Imagen del servicio de ${s.title}`}
               />
-              <div className="p-6 text-white flex flex-col items-center text-center flex-1">
-                <div className="font-bold text-xl mb-3 min-h-[56px] flex items-center">{s.title}</div>
-                <p className="text-gray-200 text-sm mb-4 line-clamp-3 flex-1">
+              <div className="p-6 flex flex-col items-center text-center flex-1">
+                <div className="font-bold text-xl mb-3 min-h-[56px] flex items-center text-gray-900 dark:text-white transition-colors">{s.title}</div>
+                <p className="text-gray-600 dark:text-gray-200 text-sm mb-4 line-clamp-3 flex-1 transition-colors">
                   {s.desc}
                 </p>
                 <button
-                  onClick={() => openModal(s)}
-                  className="mt-auto px-6 py-2 rounded-full bg-[var(--secondary-color)] text-sm font-bold text-white hover:bg-white hover:text-[var(--secondary-color)] transition-all duration-300 flex items-center space-x-2 shadow-md hover:shadow-lg flex-shrink-0"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    openModal(s);
+                  }}
+                  className="mt-auto px-6 py-2 rounded-full bg-[var(--secondary-color)] text-sm font-bold text-white hover:bg-white hover:text-[var(--secondary-color)] border border-transparent hover:border-[var(--secondary-color)] transition-all duration-300 flex items-center space-x-2 shadow-md hover:shadow-lg flex-shrink-0"
                 >
                   <span>Saber más</span>
                   <svg
@@ -154,9 +157,8 @@ function Services() {
       <Modal
         isOpen={!!selectedService}
         onRequestClose={closeModal}
-        className="w-full max-w-md bg-white rounded-2xl shadow-xl overflow-hidden relative max-h-[90vh] flex flex-col"
-        // overlayClassName="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-start z-50 p-4"
-        overlayClassName="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4"
+        className="w-full max-w-md bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden relative max-h-[90vh] flex flex-col outline-none m-4 transition-colors duration-300"
+        overlayClassName="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4 backdrop-blur-sm"
       >
         {selectedService && (
           <div className="flex flex-col h-full overflow-y-auto flex-1">
@@ -165,31 +167,34 @@ function Services() {
               <img
                 src={selectedService.img}
                 alt={`Imagen del servicio de ${selectedService.title}`}
-                className="w-full h-56 object-cover rounded-tl-2xl rounded-tr-2xl"
+                className="w-full h-56 object-cover"
               />
               <button
                 onClick={closeModal}
-                className="absolute top-4 right-4 text-gray-100 hover:text-gray-800 transition-colors"
+                className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 transition-colors"
               >
-                ✕
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
               </button>
             </div>
 
             {/* Contenido */}
             <div className="p-8 text-center">
-              <h1 className="text-gray-900 text-2xl font-bold leading-tight tracking-tight">
+              <h1 className="text-gray-900 dark:text-white text-2xl font-bold leading-tight tracking-tight transition-colors">
                 {selectedService.title}
               </h1>
-              <p className="text-gray-600 text-base font-normal leading-relaxed mt-4">
+              <p className="text-gray-600 dark:text-gray-300 text-base font-normal leading-relaxed mt-4 transition-colors">
                 {selectedService.desc}
               </p>
 
               {/* CTA */}
-              <div className="p-4">
+              <div className="pt-8 pb-4">
                 <a
-                  className="w-full flex items-center justify-center rounded-lg h-12 px-6 bg-[var(--secondary-color)] font-bold text-white hover:bg-white hover:text-[var(--secondary-color)] hover:border-2 transition-color"
+                  className="inline-flex items-center justify-center rounded-lg h-12 px-8 bg-[var(--secondary-color)] font-bold text-white hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                   href="https://wa.me/+525643883859"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Solicitar información
                 </a>

@@ -65,7 +65,7 @@ function ContactUs() {
                 <p className="text-slate-600 dark:text-slate-400">Envíanos un mensaje y uno de nuestros expertos se pondrá en contacto contigo a la brevedad.</p>
                 <form ref={form} onSubmit={handleSubmit} className="space-y-6 py-4">
                     <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                             Nombre Completo
                         </label>
                         <input
@@ -75,12 +75,12 @@ function ContactUs() {
                             value={formData.name}
                             onChange={handleChange}
                             required
-                            className="w-full px-4 py-3 rounded-lg bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-[var(--secondary-color)] focus:ring-1 focus:ring-[var(--secondary-color)] transition-colors"
+                            className="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-[var(--secondary-color)] focus:ring-1 focus:ring-[var(--secondary-color)] transition-colors"
                             placeholder="Tu nombre"
                         />
                     </div>
                     <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                             Correo Electrónico
                         </label>
                         <input
@@ -90,13 +90,13 @@ function ContactUs() {
                             value={formData.email}
                             onChange={handleChange}
                             required
-                            className="w-full px-4 py-3 rounded-lg bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-[var(--secondary-color)] focus:ring-1 focus:ring-[var(--secondary-color)] transition-colors"
+                            className="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-[var(--secondary-color)] focus:ring-1 focus:ring-[var(--secondary-color)] transition-colors"
                             placeholder="tu@email.com"
                         />
                     </div>
 
                     <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                             Teléfono
                         </label>
                         <input
@@ -106,13 +106,13 @@ function ContactUs() {
                             value={formData.phone}
                             onChange={handleChange}
                             required
-                            className="w-full px-4 py-3 rounded-lg bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-[var(--secondary-color)] focus:ring-1 focus:ring-[var(--secondary-color)] transition-colors"
+                            className="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-[var(--secondary-color)] focus:ring-1 focus:ring-[var(--secondary-color)] transition-colors"
                             placeholder="+52 123 456 7890"
                         />
                     </div>
 
                     <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                        <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                             Mensaje
                         </label>
                         <textarea
@@ -122,7 +122,7 @@ function ContactUs() {
                             onChange={handleChange}
                             required
                             rows={5}
-                            className="w-full px-4 py-3 rounded-lg bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-[var(--secondary-color)] focus:ring-1 focus:ring-[var(--secondary-color)] transition-colors resize-none"
+                            className="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-[var(--secondary-color)] focus:ring-1 focus:ring-[var(--secondary-color)] transition-colors resize-none"
                             placeholder="¿En qué podemos ayudarte?"
                         ></textarea>
                     </div>

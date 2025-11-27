@@ -43,11 +43,13 @@ const testimonials = [
 
 function Testimonials() {
   return (
-    <section id="testimonials" className="py-20 px-6">
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-[var(--secondary-color)] mb-12">
+    <section id="testimonios" className="py-20 px-6 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-[var(--secondary-color)] mb-6">
         Lo Que Dicen Nuestros Clientes
       </h2>
-      <h3 className="text-lg text-center text-gray-200 mb-12">Descubre cómo hemos ayudado a empresas como la tuya a alcanzar sus metas</h3>
+      <h3 className="text-xl text-center text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
+        Descubre cómo hemos ayudado a empresas como la tuya a alcanzar sus metas
+      </h3>
       <div className="grid gap-10 sm:grid-cols-2 max-w-5xl mx-auto">
         {testimonials.map((testimonial, index) => {
           const isLastAndOdd = index === testimonials.length - 1 && testimonials.length % 2 !== 0
@@ -57,14 +59,14 @@ function Testimonials() {
               className={`pt-8 sm:inline-block sm:px-4 ${isLastAndOdd ? 'sm:col-span-2 sm:w-[calc(50%-1.25rem)] sm:justify-self-center' : 'sm:w-full'
                 }`}
             >
-              <figure className="rounded-2xl bg-white/2.5 p-8 text-sm/6">
-                <blockquote className="text-gray-100">
-                  <p>{`“${testimonial.body}”`}</p>
+              <figure className="rounded-2xl bg-white dark:bg-gray-800 p-8 text-sm/6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <blockquote className="text-gray-700 dark:text-gray-300">
+                  <p className="text-lg italic">{`“${testimonial.body}”`}</p>
                 </blockquote>
                 <figcaption className="mt-6 flex items-center gap-x-4">
-                  <img alt="" src={testimonial.author.imageUrl} className="size-10 rounded-full bg-gray-800" />
+                  <img alt="" src={testimonial.author.imageUrl} className="size-10 rounded-full bg-gray-100 dark:bg-gray-700 object-cover" />
                   <div>
-                    <div className="font-semibold text-white">{testimonial.author.name}</div>
+                    <div className="font-semibold text-gray-900 dark:text-white text-base">{testimonial.author.name}</div>
                   </div>
                 </figcaption>
               </figure>
