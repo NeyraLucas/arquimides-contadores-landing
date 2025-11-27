@@ -4,6 +4,11 @@ import repse from "../assets/imgs/Repse.png"
 import siroc from "../assets/imgs/Siroc.png"
 import maquilado from "../assets/imgs/Maquilado-de-nomina.png"
 import timbrado from "../assets/imgs/timbrado-de-nomina.jpg"
+import estadosFinancieros from "../assets/imgs/analisis-de-los-estados-financieros.jpg"
+import auditorias from "../assets/imgs/auditorias-internas.jpg"
+import contabilidad from "../assets/imgs/contabilidad-por-centro-de-costos.png"
+import revisionSAT from "../assets/imgs/sat-revision.jpg"
+import revisionST from "../assets/imgs/revision-de-la-secretaria-de-trabajo.jpg"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -40,27 +45,27 @@ const services = [
   {
     title: "Contabilidad por Centro de Costos",
     desc: "La contabilidad por centro de costos te permite saber exactamente cuánto gana y cuánto pierde cada una de tus obras. En Arquimedes Contadores diseñamos un sistema contable estructurado por proyecto, con reportes claros que desglosan materiales, mano de obra, gastos generales y márgenes reales. Esta visibilidad te permite optimizar recursos, tomar mejores decisiones financieras y detectar fugas de dinero antes de que afecten tu rentabilidad. Usamos herramientas inteligentes que agilizan los procesos, garantizan precisión en la información y generan informes listos para presentar a socios, bancos o inversionistas.",
-    img: pex
+    img: contabilidad
   },
   {
     title: "Revision de SAT",
     desc: "Nos adelantamos a cualquier auditoría del SAT. Revisamos cada declaración, pago provisional, deducción, factura emitida o recibida, conciliación bancaria y CFDI, asegurando que todo esté alineado con tus obligaciones fiscales. Combinamos tecnología y análisis experto para detectar errores, omisiones o riesgos. Luego, te entregamos un reporte con observaciones puntuales y un plan de acción para corregir o reforzar tu estrategia fiscal. Esto te brinda certeza, control y confianza ante cualquier revisión de Hacienda.",
-    img: pex
+    img: revisionSAT
   },
   {
     title: "Revisión de la Secretaria del Trabajo",
     desc: "Inspecciones laborales pueden surgir sin previo aviso. Nosotros auditamos internamente tu cumplimiento con la Secretaría del Trabajo: contratos, prestaciones, condiciones laborales, seguridad e higiene, registros patronales, entre otros. Detectamos áreas vulnerables y te ayudamos a corregirlas con rapidez. También preparamos la documentación que toda empresa debe tener a la mano ante una inspección. Con este servicio proteges tu empresa, fortaleces tu reputación y evitas sanciones costosas.",
-    img: pex
+    img: revisionST
   },
   {
     title: "Estados Financieros",
     desc: "Tus cifras deben hablar con claridad. Elaboramos estados financieros sólidos, confiables y adaptados a tu realidad constructora: balance general, estado de resultados, flujo de efectivo y análisis comparativos por obra o periodo. Traducimos los datos en información útil para tomar decisiones, presentar ante bancos, inversionistas o socios, o simplemente para que tú tengas el control de tu empresa. Todos nuestros informes están elaborados bajo normas contables vigentes, listos para auditorías, declaraciones o revisiones estratégicas.",
-    img: pex
+    img: estadosFinancieros
   },
   {
     title: "Auditorias Internas",
     desc: "Detecta riesgos antes de que se conviertan en problemas. Nuestras auditorías internas evalúan a fondo tus procesos contables, fiscales, laborales y administrativos. Revisamos controles, detectamos fraudes o malas prácticas, analizamos desviaciones financieras y proponemos soluciones prácticas. Utilizamos herramientas de inteligencia artificial para acelerar el análisis, pero con interpretación humana que entiende el contexto real de tu empresa. Este servicio fortalece tu operación y te prepara para enfrentar cualquier auditoría externa con confianza.",
-    img: pex
+    img: auditorias
   },
 ];
 
@@ -116,7 +121,7 @@ function Services() {
       >
         {services.map((s) => (
           <SwiperSlide key={s.title}>
-            <div className="bg-[#00182E] rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col select-none min-h-[420px] h-full">
+            <div onClick={() => openModal(s)} className="bg-[#00182E] rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col select-none min-h-[420px] h-full">
               <img
                 className="w-full h-48 object-cover flex-shrink-0"
                 src={s.img}
