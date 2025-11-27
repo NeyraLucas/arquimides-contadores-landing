@@ -4,7 +4,8 @@
 :root {
     --primary-color: #001020;
     --secondary-color: #B8530A;
-    --contrast-color: #FFFFFF;
+    --contrast-color: #f6f7f8;
+    --light-color: #001020;
 }
 
 body {

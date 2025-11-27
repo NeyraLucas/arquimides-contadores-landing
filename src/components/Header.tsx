@@ -42,7 +42,7 @@ function Header() {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-sm font-medium text-gray-200 hover:text-[var(--secondary-color)] transition-colors"
+                className="text-sm font-medium text-[var(--light-color)] dark:text-gray-200 hover:text-[var(--secondary-color)] transition-colors"
               >
                 {item}
               </a>
@@ -50,7 +50,7 @@ function Header() {
           </div>
           <a
             href="#contact"
-            className="h-10 flex items-center justify-center rounded-md px-5  bg-[var(--secondary-color)] text-sm font-bold text-white hover:bg-white hover:text-[var(--secondary-color)] transition-colors"
+            className="h-10 flex items-center justify-center rounded-md px-5 border border-[var(--secondary-color)]  bg-[var(--secondary-color)] text-sm font-bold text-white hover:bg-white hover:text-[var(--secondary-color)] transition-colors"
           >
             Contactanos
           </a>
@@ -59,14 +59,14 @@ function Header() {
             className="p-2 rounded-full text-gray-200 hover:text-[var(--secondary-color)] transition-colors focus:outline-none cursor-pointer"
             aria-label="Toggle Dark Mode"
           >
-            {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
+            {darkMode ? <FaSun size={20} /> : <FaMoon className="text-[var(--secondary-color)]" size={20} />}
           </button>
         </nav>
 
         {/* Botón de hamburguesa para móvil */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden text-gray-50 focus:outline-none"
+          className="md:hidden text-[var(--light-color)] dark:text-gray-200 focus:outline-none"
         >
           {isMenuOpen ? (
             <svg
@@ -120,7 +120,7 @@ function Header() {
           ))}
           <a
             href="#contact"
-            className="h-10 flex items-center justify-center rounded-md px-5  bg-[var(--secondary-color)] text-sm font-bold text-white hover:bg-white hover:text-[var(--secondary-color)] transition-colors mt-2"
+            className="h-10 flex items-center justify-center rounded-md px-5  bg-[var(--secondary-color)] border border-[var(--secondary-color)] text-sm font-bold text-white hover:bg-white hover:text-[var(--secondary-color)] transition-colors mt-2"
             onClick={() => setIsMenuOpen(false)} // Cierra el menú al hacer clic en el botón
           >
             Contactanos
@@ -130,15 +130,15 @@ function Header() {
               toggleDarkMode();
               setIsMenuOpen(false);
             }}
-            className="flex items-center gap-2 text-base font-medium text-gray-600 hover:text-blue-600 transition-colors py-2 cursor-pointer"
+            className="flex items-center gap-2 text-base font-medium text-gray-600 hover:text-[var(--secondary-color)] transition-colors py-2 cursor-pointer"
           >
             {darkMode ? (
               <>
-                <FaSun size={20} /> <span>Modo Claro</span>
+                <FaSun className="text-[var(--light-color)] dark:text-[var(--secondary-color)]" size={20} /> <span>Modo Claro</span>
               </>
             ) : (
               <>
-                <FaMoon size={20} /> <span>Modo Oscuro</span>
+                <FaMoon className="text-[var(--light-color)] dark:text-[var(--secondary-color)]" size={20} /> <span >Modo Oscuro</span>
               </>
             )}
           </button>

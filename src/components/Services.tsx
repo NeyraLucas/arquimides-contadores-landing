@@ -93,7 +93,7 @@ function Services() {
     setSelectedService(service);
   const closeModal = () => setSelectedService(null);
   return (
-    <section id="services" className="py-20 bg-gray-900 px-6">
+    <section id="services" className="py-20 dark:bg-gray-900 px-6">
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-[var(--secondary-color)] mb-12">
         Nuestros servicios
       </h2>
