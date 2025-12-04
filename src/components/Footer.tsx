@@ -2,7 +2,7 @@ import { MapPin } from 'lucide-react';
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
-import { BsTwitterX } from "react-icons/bs";
+// import { BsTwitterX } from "react-icons/bs";
 
 import ContactUs from './ContactUs';
 
