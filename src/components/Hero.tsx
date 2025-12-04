@@ -1,4 +1,4 @@
-import Accountant from "../assets/accountant.png";
+import Accountant from "../assets/imgs/cesar.jpeg";
 function Hero() {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center py-20">

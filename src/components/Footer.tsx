@@ -41,6 +41,28 @@ function Footer() {
                 </p>
               </div>
             </div>
+            <div className="w-full h-48 rounded-lg overflow-hidden shadow-lg border border-gray-300 dark:border-gray-700">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3764.6394066907587!2d-98.98299712478794!3d19.34144748191851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDIwJzI5LjIiTiA5OMKwNTgnNDkuNSJX!5e0!3m2!1ses!2smx!4v1764871364861!5m2!1ses!2smx"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Mapa de Ubicación"
+              >
+              </iframe>
+            </div>
+            {/* <div className="flex items-center gap-2">
+              <MapPin className="text-[var(--secondary-color)] w-5 h-5" />
+              <div>
+                <p className='font-bold text-gray-900 dark:text-white'>Dirección</p>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Calle 29 mnz 234 Lt 19, los reyes la paz  56430
+                </p>
+              </div>
+            </div> */}
 
           </div>
 
@@ -53,9 +75,9 @@ function Footer() {
             <a href="https://www.facebook.com/share/19XraXCjEv/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors transform hover:scale-110">
               <FaFacebookF className="w-6 h-6" />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-white hover:text-gray-400 transition-colors transform hover:scale-110">
+            {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-white hover:text-gray-400 transition-colors transform hover:scale-110">
               <BsTwitterX className="w-6 h-6" />
-            </a>
+            </a> */}
             <a href="https://www.instagram.com/arquimedes.contadores" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition-colors transform hover:scale-110">
               <FaInstagram className="w-6 h-6" />
             </a>

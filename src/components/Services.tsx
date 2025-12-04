@@ -19,7 +19,7 @@ Modal.setAppElement("#root");
 const services = [
   {
     title: "SIROC",
-    desc: "Desde la apertura de obra hasta su cierre ante el IMSS, nos encargamos de todo el proceso en el sistema SIROC. Sabemos que una omisión puede significar multas, suspensiones o bloqueos en licitaciones. Por eso, realizamos el alta inicial, seguimiento, reportes mensuales, modificaciones y cierres conforme a las obligaciones vigentes. También te asesoramos sobre anticipos, fianzas, subcontratistas y cumplimiento laboral. Nuestro equipo domina cada detalle técnico y normativo para que tú solo te concentres en ejecutar y entregar proyectos con tranquilidad.",
+    desc: "Desde la apertura de obra hasta su cierre ante el IMSS, nos encargamos de todo el proceso en el sistema SIROC. Sabemos que una omisión puede significar multas, suspensiones o bloqueos en licitaciones. Por eso, realizamos el alta inicial, seguimiento, reportes bimestrales, modificaciones y cierres conforme a las obligaciones vigentes. También te asesoramos sobre anticipos, fianzas, subcontratistas y cumplimiento laboral. Nuestro equipo domina cada detalle técnico y normativo para que tú solo te concentres en ejecutar y entregar proyectos con tranquilidad.",
     img: siroc
   },
   {
@@ -39,7 +39,7 @@ const services = [
   },
   {
     title: "Revisión IMSS",
-    desc: "Muchos errores en pagos al IMSS se detectan tarde, cuando ya hay recargos, multas o auditorías. En Arquimedes Contadores hacemos una revisión exhaustiva de tu situación ante el IMSS: cuotas, movimientos afiliatorios, incidencias, riesgos de trabajo y más. Detectamos anomalías, diferencias o cálculos incorrectos antes de que representen un problema legal o financiero. Te entregamos un diagnóstico claro y te ayudamos a corregir todo con anticipación, protegiendo tu empresa de inspecciones sorpresivas o bloqueos.",
+    desc: "Muchos errores en pagos al IMSS se detectan tarde, cuando ya hay recargos, multas o auditorías. En Arquimedes Contadores hacemos una conciliación exhaustiva de tu situación ante el IMSS: cuotas, movimientos afiliatorios, incidencias, riesgos de trabajo y más. Detectamos anomalías, diferencias o cálculos incorrectos antes de que representen un problema legal o financiero. Te entregamos un diagnóstico claro y te ayudamos a corregir todo con anticipación, protegiendo tu empresa de inspecciones sorpresivas o bloqueos bancarios.",
     img: pex
   },
   {
@@ -59,7 +59,7 @@ const services = [
   },
   {
     title: "Estados Financieros",
-    desc: "Tus cifras deben hablar con claridad. Elaboramos estados financieros sólidos, confiables y adaptados a tu realidad constructora: balance general, estado de resultados, flujo de efectivo y análisis comparativos por obra o periodo. Traducimos los datos en información útil para tomar decisiones, presentar ante bancos, inversionistas o socios, o simplemente para que tú tengas el control de tu empresa. Todos nuestros informes están elaborados bajo normas contables vigentes, listos para auditorías, declaraciones o revisiones estratégicas.",
+    desc: "Tus cifras deben hablar con claridad. Elaboramos estados financieros sólidos, confiables y adaptados a tu realidad constructora: balance general, estado de resultados, flujo de efectivo y análisis comparativos por obra o periodo. Traducimos los datos en información útil para tomar decisiones, presentar ante bancos, inversionistas o socios, o simplemente para que tú tengas el control de tu empresa. Todos nuestros informes están elaborados bajo normas contables vigentes de información financiera, listos para auditorías, declaraciones o revisiones estratégicas.",
     img: estadosFinancieros
   },
   {

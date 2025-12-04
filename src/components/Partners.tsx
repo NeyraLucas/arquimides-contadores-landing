@@ -5,6 +5,10 @@ import aspelCoi from "../assets/imgs/partners/aspel-coi.png";
 import aspelNoi from "../assets/imgs/partners/aspel-noi.png";
 import ezaudita from "../assets/imgs/partners/ezaudita.png";
 import sigoAstepl from "../assets/imgs/partners/sigo-astepl.png";
+import aspelBanco from "../assets/imgs/partners/aspel-banco.png";
+import aspelCaja from "../assets/imgs/partners/aspel-caja.png";
+import aspelProd from "../assets/imgs/partners/aspel-prod.png";
+import chatgpt from "../assets/imgs/partners/chatgpt-logo.png";
 
 const partners = [
     { name: "Aspel COI", img: aspelCoi },
@@ -16,6 +20,10 @@ const partners = [
     { name: "Aspel NOI", img: aspelNoi },
     { name: "ezaudita", img: ezaudita },
     { name: "Siigo Aspel", img: sigoAstepl },
+    { name: "Aspel Banco", img: aspelBanco },
+    { name: "Aspel Caja", img: aspelCaja },
+    { name: "Aspel Prod", img: aspelProd },
+    { name: "ChatGPT", img: chatgpt },
 ];
 
 function Partners() {
