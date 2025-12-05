@@ -89,7 +89,7 @@ function Footer() {
 
         <div className="border-t border-gray-200 dark:border-gray-800 pt-8 text-center">
           <p className="mb-4 text-gray-600 dark:text-gray-500">
-            © {new Date().getFullYear()} Arquimides Contadores. All rights reserved.
+            © {new Date().getFullYear()} Arquimedes Contadores. All rights reserved.
           </p>
         </div>
       </div>
