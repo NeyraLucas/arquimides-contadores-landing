@@ -3,7 +3,7 @@ import Header from "./components/Header"
 import Hero from "./components/Hero"
 import About from "./components/About"
 import Services from "./components/Services"
-import Testimonials from "./components/Testimonials"
+// import Testimonials from "./components/Testimonials"
 import Partners from "./components/Partners"
 import Footer from "./components/Footer"
 import FloatingWhatsApp from "./components/FloatingWhatsApp"
@@ -44,7 +44,7 @@ function App() {
         <Hero />
         <About />
         <Services />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Partners />
       </main>
       <Footer />
